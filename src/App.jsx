@@ -1,21 +1,12 @@
 import React from "react";
 import "./App.css";
 import { Button, ConfigProvider } from "antd";
-import { getLoginQrCKey } from "./api";
 
 function App() {
     const [theme, settheme] = React.useState({
         token: { colorPrimary: "pink" }
     });
-    const fn = () => {
-        getLoginQrCKey()
-            .then((res) => {
-                console.log(res.data);
-            })
-            .catch((err) => {
-                console.log(err);
-            });
-    };
+    const fn = () => {};
 
     return (
         <ConfigProvider theme={theme} className="App">
